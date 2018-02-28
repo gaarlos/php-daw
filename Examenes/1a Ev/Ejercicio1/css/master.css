@@ -1,0 +1,58 @@
+*, ::after, ::before {
+  box-sizing: inherit;
+  cursor: default;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.container {
+  justify-content: space-between;
+  max-width: 1080px;
+  margin: auto;
+  padding: 2em;
+  background-color: rgb(224, 224, 224);
+}
+
+.first-form {
+  max-width: 10rem;
+  margin: auto;
+}
+
+.first-form > * {
+  margin-top: 1rem;
+}
+
+.second-form > input {
+  max-width: 10rem;
+  padding: .25rem;
+  margin-top: .5rem;
+}
+
+.second-form > div {
+  margin-top: .5rem;
+}
+
+input[type=radio], input[type=color], input[type=submit] {
+  cursor: pointer;
+}
+
+input[type=submit] {
+  border: 1px solid rgb(100, 100, 255);
+  background-color: rgb(200, 200, 255);
+  transition: background-color .5s ease;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(100, 100, 255);
+}

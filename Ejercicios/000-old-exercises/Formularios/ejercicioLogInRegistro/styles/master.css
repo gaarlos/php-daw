@@ -1,0 +1,59 @@
+:root {
+    box-sizing: border-box;
+    display: flex;
+}
+.content {
+    background-color: #ccc;
+}
+input[type=submit]:focus {
+    outline: none;
+}
+body * + * {
+    margin: .25em;
+}
+iframe {
+    height: auto; 
+    width: 100%;
+    overflow: hidden;
+}
+.response {
+    max-height: 10em;
+}
+h2 {
+    margin-top: -.25em;
+    background-color: #f2f2f2;
+    border: 1px solid #535C99;
+    padding: .5em;
+    border-radius: 4px;
+    text-align: center;
+}
+input[type=text], input[type=password], select {
+    width: calc(100% - 3em);
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #535C99;
+    border-radius: 4px;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #535C99;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #4C5496;
+}
+section {
+    float: left;
+    width: calc(25% - 2em);
+    margin: .5em;
+}
+div {
+    border-radius: 5px;
+    background-color: #ccc;
+    padding: 1em;
+}

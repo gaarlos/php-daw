@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/master.css">
+<body>
+    <header>
+        <h2>Buenos días</h2>
+    </header>
+    <section>
+        <div>
+        <h2>Iniciar sesión</h2>
+        <form action="phps/control_de_acceso_array.php" method="post" target="response">
+            <label for="user">Nombre de usuario</label>
+            <input type="text" name="user" placeholder="Usuario.." required>
+            <label for="pass">Contraseña</label>
+            <input type="password" name="pass" placeholder="Contraseña.." required>
+    
+            <input type="submit" value="Iniciar sesión">
+        </form>
+        </div>
+    </section>
+
+    <section>
+        <div>
+        <form action="phps/registro.php" method="post" target="response">
+            <h2>Nuevo usuario</h2>
+            <label for="user">Nombre de usuario</label>
+            <input type="text" name="user" placeholder="Usuario.." required>
+    
+            <label for="pass">Contraseña</label>
+            <input type="password" name="pass" placeholder="Contraseña.." required>
+            
+            <label for="gendre">Género</label><br>
+            <input type="radio" name="gendre" value="hombre" checked> Hombre<br>
+            <input type="radio" name="gendre" value="mujer"> Mujer<br>
+
+            <label for="language">Idioma</label><br>
+            <select name="language">
+                <option value="ingles">Inglés</option>
+                <option value="frances">Francés</option>
+                <option value="espanol">Español</option>
+                <option value="italiano">Italiano</option>
+                <option value="portugues">Portugués</option>
+            </select><br>            
+        
+            <label for="">Intereses/Aficiones</label><br>
+            <input type="checkbox" name="hobbies[]" value="videojuegos"> Videojuegos<br>
+            <input type="checkbox" name="hobbies[]" value="cine"> Cine<br>
+            <input type="checkbox" name="hobbies[]" value="informática"> Informática<br>
+
+            <textarea name="text" cols="30" rows="5" placeholder="Escribe una descripción.."></textarea>
+        
+            <input type="submit" value="Registrarme">
+        </form>
+        </div>
+    </section>
+    <section>
+        <div class="content">
+                <iframe name="response" class="response" frameborder="0"></iframe>
+        </div>
+    </section>
+</body>
+</html>

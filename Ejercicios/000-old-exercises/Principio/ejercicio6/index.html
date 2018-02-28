@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Notas de alumnos</title>
+        <style>
+            form {
+                width: 25%;
+                border: 1px solid black;
+                padding: 1em;
+            }
+            input {
+                margin-bottom: 2em;
+            }
+            label {
+                display: inline-block;
+            }
+            .continue {
+                float: right;
+            }
+            .continue_div {
+                height: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="comprobante.php" method="post">
+            <label for="nota">Nota:</label>
+            <input type="number" name="nota" min="1" max="10" placeholder="Nota del alumno" required><br>
+
+            <label for="nombre">Nombre y apellidos:</label>
+            <input type="text" name="nombre" placeholder="Nombre y apellidos" required><br>
+            <div class="continue_div">
+                <input class="continue" type="submit" value="Comprobar">
+        </div>    
+        </form>
+    </body>
+</html>

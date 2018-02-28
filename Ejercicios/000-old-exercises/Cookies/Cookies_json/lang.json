@@ -1,0 +1,17 @@
+{
+  "Spanish": [
+    "INTRODUZCA SU DNI Y CALCULE SU LETRA",
+    "Cambiar estilos",
+    "Introduce el número de tu DNI: ",
+    "Comprobar letra",
+    "Tu letra del DNI es: "
+  ],
+
+  "English": [
+    "INSERT YOUR DNI NUMBER AND GET THE LETTER",
+    "Change styles",
+    "Type DNI number: ",
+    "Check letter",
+    "Your DNI letter is: "
+  ]
+}

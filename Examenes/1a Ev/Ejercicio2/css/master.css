@@ -1,0 +1,77 @@
+*, ::after, ::before {
+  box-sizing: inherit;
+  cursor: default;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.container {
+  justify-content: space-between;
+  max-width: 1080px;
+  margin: auto;
+  padding: 2em;
+  background-color: rgb(224, 224, 224);
+}
+
+section {
+  justify-content: space-between;
+}
+
+/* INDEX PAGE */
+
+.signin {
+  margin: auto;
+  max-width: 30em;
+}
+
+input {
+  margin-top: 1em;
+}
+
+.text-field {
+  padding: .5rem!important;
+}
+
+input[type=submit] {
+  width: 50%;
+  cursor: pointer;
+  border: 1px solid rgb(100, 100, 255);
+  background-color: rgb(200, 200, 255);
+  padding: .5rem;
+  transition: background-color .5s ease;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(100, 100, 255);
+}
+
+/*  CONVERSOR  */
+
+select {
+  padding:1em 3em;
+}
+
+option {
+  padding: 2em;
+}
+
+.howto {
+  width: 20%;
+}
+
+/*  RESULT  */
+
+.result > * {
+  text-align: center;
+}

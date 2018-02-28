@@ -1,0 +1,72 @@
+.form-calendar {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 1em;
+  width: 40%;
+}
+
+input[type=submit], [type=reset] {
+  cursor: pointer;
+  border: 1px solid #4c4bbe;
+  background-color: rgb(76, 75, 190, .2);
+  padding: .12em 0;
+  width: 12em;
+  transition: background-color .5s;
+}
+
+select {
+  padding: .12em 0;
+}
+
+input[type=submit]:hover, [type=reset]:hover {
+  background-color: rgb(76, 75, 190, .4);
+  transition: background-color .5s;
+}
+
+.main-table {
+  text-align: center;
+}
+
+.main-cells {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+.month-table {
+  max-width: 25vw;
+  width: 100%;
+  font-family: Arial;
+  font-size: 0.8em;
+  margin-right: 1rem;
+  float: left;
+}
+
+caption {
+  padding: 5px 10px;
+  background-color: #003366;
+  color: #fff;
+  font-weight: bold;
+}
+
+th {
+  background-color: #006699;
+  color: #fff;
+  width: 40px;
+}
+
+td {
+  padding: 2px 5px;
+  background-color: silver;
+  text-align: center;
+}
+
+.today {
+  background-color:red;
+}
+
+.error {
+  color: rgb(150, 0, 0);
+  padding: 2em 0;
+  cursor: default;
+}

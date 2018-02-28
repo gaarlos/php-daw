@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/master.css">
+  <title>Una aguja en un pajar</title>
+</head>
+<body>
+  <main>
+  <form action="php/functions.php" method="post" class="flex column" target="answer">
+    <textarea name="text-area" cols="30" rows="4"></textarea>
+    <input type="text" name="search">
+    <div class="flex buttons">
+      <input type="submit" name="exist" value="Existe">
+      <input type="submit" name="positions" value="Posiciones">
+      <input type="submit" name="replace" value="Reemplazar">
+      <input type="reset" name="clean" value="Borrar">
+    </div>
+  </form>
+  <iframe frameborder="0" name="answer"></iframe>
+  </main>
+</script>
+</body>
+</html>

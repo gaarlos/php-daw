@@ -1,0 +1,47 @@
+/*  MAIN STYLES  */
+
+* + * {
+  margin-top: .5em;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+main {
+  width: 30%; 
+}
+
+/*  TEXT AND TEXTAREA  */
+
+input[type=text]:focus, textarea:focus {
+  border: 1px solid #4c4bbe;
+}
+
+/*  BUTTONS  */
+
+.buttons {
+  justify-content: space-between;
+}
+
+input[type=submit], [type=reset] {
+  cursor: pointer;
+  border: 1px solid #4c4bbe;
+  background-color: rgb(76, 75, 190, .2);
+  padding: 1em 0;
+  width: 10em;
+  transition: background-color .5s;
+}
+
+input[type=submit]:hover, [type=reset]:hover {
+  background-color: rgb(76, 75, 190, .4);
+  transition: background-color .5s;
+}
+
+input + input {
+  margin: 0 0 0 1em;
+}

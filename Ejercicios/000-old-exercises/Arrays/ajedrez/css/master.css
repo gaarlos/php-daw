@@ -1,0 +1,19 @@
+:root {
+    box-sizing: border-box;
+}
+
+td {
+    text-align: center;
+    width: 4em;
+    height: 4em;
+}
+
+img {
+    width: 4em;
+    height: 4em;
+    margin-bottom: -.2em;
+}
+
+tr:nth-child(odd) > td:nth-child(even), tr:nth-child(even) > td:nth-child(odd) {
+    background-color: black;
+}

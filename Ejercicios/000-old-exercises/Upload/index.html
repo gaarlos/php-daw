@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles/master.css">
+    <script src="scripts/scripts.js"></script>
+<body>
+    <header>
+        <h2>Buenos días</h2>
+    </header>
+    <section>
+        <div>
+        <h2>Buscar foto</h2>
+        <form action="phps/buscar_foto.php" method="post" target="response">
+            <label for="user">Nombre de usuario</label>
+            <input type="text" name="user" placeholder="Usuario.." required>
+    
+            <input type="submit" value="Buscar">
+        </form>
+        </div>
+    </section>
+
+    <section>
+        <div>
+        <form action="phps/registro.php" class="form" method="post" target="response" enctype="multipart/form-data">
+            <h2>Nuevo usuario</h2>
+            <label for="user">Nombre de usuario</label>
+            <input type="text" name="user" placeholder="Usuario.." required>
+    
+            <label for="pass">Contraseña</label>
+            <input type="password" name="pass" placeholder="Contraseña.." required>
+
+            <input type="file" name="profile" class="profile" accept="image/*" style="color: transparent">
+            <input type="submit" class="submit" value="Registrarme">
+        </form>
+        </div>
+    </section>
+    <section class="content-frame">
+        <div class="content">
+                <iframe name="response" class="response" frameborder="0"></iframe>
+        </div>
+    </section>
+</body>
+</html>

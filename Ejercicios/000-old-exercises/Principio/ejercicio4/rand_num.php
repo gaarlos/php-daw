@@ -1,0 +1,1 @@
+Estás pensando en el número <?php echo(rand(1, 10));?>

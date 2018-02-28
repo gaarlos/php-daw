@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            :root {
+                box-sizing: border-box;
+                display: flex;
+            }
+            body {
+                background-color: #CCCCCC;
+            }
+            h4, form, iframe {
+                min-width: 30%;
+                border-radius: 1em;
+                padding: 1em;
+                text-align: center;
+                margin-top: -.25em;
+            }
+            h4 {
+                background-color: #A6A6FF;
+            }
+            input { 
+                text-align: right;
+            }
+            form {
+                background-color: white;
+                border: 1px solid black;
+                margin-top: -.75em;
+            }
+            label {
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <h4>INTRODUZCA SU DNI Y CALCULE SU LETRA</h4>
+        <form action="link.php" method="post" target="letraDNI">
+            <label for="numeroDNI">Introduce tu número de DNI: </label>
+            <input type="text" name="numeroDNI" pattern="[0-9]{1,9}" maxlength="9" size="9" placeholder="ej. 12345678" required>
+            <input type="submit" value="Comprobar letra">
+        </form>
+        <iframe name="letraDNI" frameborder="0" height="50" width="400"></iframe>
+    </body>
+</html>

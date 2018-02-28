@@ -1,0 +1,86 @@
+*, ::after, ::before {
+  box-sizing: inherit;
+  cursor: default;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.f-column {
+  flex-direction: column;
+}
+
+.container {
+  justify-content: space-between;
+  max-width: 1080px;
+  margin: auto;
+  padding: 2em;
+  background-color: rgb(224, 224, 224);
+}
+
+section {
+  text-align: center;
+  justify-content: space-between;
+}
+
+/* INDEX PAGE */
+
+.signin {
+  margin: auto;
+  max-width: 30em;
+}
+
+input {
+  margin-top: 1em;
+}
+
+.text-field {
+  padding: .5rem!important;
+}
+
+input[type=submit] {
+  width: 50%;
+  padding: .5em;
+  border: none;
+  cursor: pointer;
+}
+
+.play-submit {
+  background: rgb(200, 200, 200);
+}
+
+.signin-submit {
+  background: white;
+}
+
+.play-submit, .signin-submit {
+  transition: background .5s ease;
+}
+
+.play-submit:hover, .signin-submit:hover {
+  background: rgb(150, 150, 150);
+}
+
+/* THE GAME */
+
+.game-0 {
+  text-align: center;
+}
+
+.letters > div {
+  margin: .2em;
+  padding: .1em;
+  width: 1em;
+  text-align: center;
+  border-bottom: 1px solid grey;
+}
+
+.helper {
+  font-weight: bold;
+}

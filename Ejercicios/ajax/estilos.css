@@ -1,0 +1,39 @@
+#menu {
+  font-family: Arial;
+  margin:5px;
+}
+
+#menu p {
+  margin:0px;
+  padding:0px;
+}
+
+#menu a {
+  display: block;
+  padding: 3px;
+  width: 160px;
+  background-color: #f7f8e8;
+  border-bottom: 1px solid #eee;
+  text-align:center;
+}
+
+#menu a:link, #menu a:visited {
+  color: #f00;
+  text-decoration: none;
+}
+
+#menu a:hover {
+  background-color: #369;
+  color: #fff;
+}
+
+#detalles {
+  background-color:#ffc;
+  text-align:left;
+  font-family:verdana;
+  border-width:0;
+  padding:5px;
+  border: 1px dotted #fa0;
+  margin:20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px #aaa;  
