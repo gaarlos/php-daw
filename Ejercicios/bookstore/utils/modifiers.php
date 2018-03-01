@@ -1,5 +1,5 @@
 <?php
-  require_once('xmlLoader.php');
+  require_once('../xml/xmlLoader.php');
 
   function modifyFrom ($compare, $newData, $table) {
     require('../bbdd/connection.php');    

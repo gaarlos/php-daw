@@ -1,6 +1,6 @@
 <html>
 <?php
-  require_once($_SERVER['DOCUMENT_ROOT'] . '/Ejercicios/BBDD/styles/header.php');
+  require_once('../styles/header.php');
   $header = new Header('Base de datos', 'Modify customers');
   echo $header;
 ?>

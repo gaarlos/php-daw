@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<!DOCTYPE books SYSTEM "parser.dtd">
+<books><book id="123456789"><firstname>El Programador</firstname><surname>Juan Jos&#xE9; Castro</surname><email>150</email><tipo>11</tipo></book></books>

@@ -3,7 +3,7 @@
     var_dump(header('Location: books/add_book.php'));
   }
   if (isset($_POST['register'])) {
-    header('Location: customers/register.php');
+    header('Location: customers/add_customer.php');
   }
 ?>
 

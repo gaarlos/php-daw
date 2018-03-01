@@ -88,14 +88,14 @@
     }
     
     .operator-text {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
       margin-bottom: 1rem;
     }
 
     *, ::after, ::before {
       box-sizing: border-box;
       cursor: default;
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
     }
     
     ::-webkit-scrollbar {
@@ -141,7 +141,6 @@
     table, th, td {
       border: 1px solid black;
       border-collapse: collapse;
-      font-family: Verdana, Arial, Helvetica, sans-serif;
     }
 
     th {
@@ -150,6 +149,10 @@
 
     td {
       background-color: #80e27e;
+    }
+
+    #status {
+      margin: 1rem 0;
     }
 
     .ex, .title {

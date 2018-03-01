@@ -13,7 +13,11 @@
     $statement->execute();
   
     $rows = $statement->fetchAll();
-  
+
+    if (printError($rows)) {
+      return;
+    }
+    
     echo "<table style='width: 100%;'>
         <tr>
           <th>ISBN</th>
@@ -36,6 +40,10 @@
     $statement->execute();
   
     $rows = $statement->fetchAll();
+
+    if (printError($rows)) {
+      return;
+    }
   
     echo "<table style='width: 100%;'>
         <tr>
@@ -48,6 +56,20 @@
     printRows($rows);
 
     echo "</table>";
+  }
+
+  function printError ($rows) {
+    if (sizeof($rows) == 0) {
+      echo "<table style='width: 100%;'>
+        <tr>
+          <th style='background-color: #dd4b39;'>No hay datos almacenados</th>    
+        </tr>";
+      echo "</table>";
+
+      return true;
+    }
+
+    return false;
   }
 
   function printRows ($rows) {

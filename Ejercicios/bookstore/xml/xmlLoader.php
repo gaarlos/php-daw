@@ -1,6 +1,7 @@
 <?php
   function addToXML ($compare, $newData, $table) {
-    $xmlFile = @simplexml_load_file("../xml/".$table."s.xml");
+    $route = "../xml/files/$table"."s.xml";
+    $xmlFile = @simplexml_load_file($route);
 
     if (!$xmlFile) {
       $xml = new SimpleXMLElement("<".$table."s></".$table."s>");
@@ -10,11 +11,6 @@
 
     $newEntry = $xml->addChild($table);
     $newEntry->addAttribute('id', $compare);
-
-    foreach ($xml as $table) {
-      var_dump(property_exists($table, 'id'));
-    }
-
 
     if($table == 'book') {
       array_unshift($newData, $compare);
@@ -27,10 +23,10 @@
       $newEntry->addChild($query[$i], $newData[$i]);
     }
 
-    $xml->asXML("../xml/".$table."s.xml");
+    $xml->asXML($route);
   }
 
-  function compare ($xml) {
+  function compare ($xml, $table) {
     if($table == 'book') {
       foreach ($xml as $table) {
         var_dump($table->isbn);
