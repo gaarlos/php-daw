@@ -14,8 +14,6 @@
     }
 
     try {
-      addToXML($compare, $newData, $table);
-
       $statement = $db->prepare($query);
 
       $statement->bindValue(':field0',$newData[0]);
@@ -25,6 +23,8 @@
       $statement->bindValue(':compare', $compare);
       $statement->execute();
 
+      modifyXML($compare, $newData, $table);
+      
       echo "'" . $newData[0] . "' se ha actualizado con éxito<br>
       <a href='../index.php' class='back'>Volver</a>";
     } catch (PDOException $e) {

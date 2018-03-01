@@ -1,4 +1,5 @@
 <?php
+  require_once('../xml/xmlLoader.php');
   decodeArray($_GET['q']);
     
   function decodeArray ($str) { addCustomer(explode('=', $str)); }
@@ -20,6 +21,7 @@
       $statement->bindValue(':tipo', $customer[3]);
 
       $statement->execute();
+      addToXML($customer[2], $customer, 'customer');      
 
       echo "El usuario '" . $customer[0] . " " . $customer[1] ."' se ha añadido con éxito<br>";
     } catch (PDOException $e) {

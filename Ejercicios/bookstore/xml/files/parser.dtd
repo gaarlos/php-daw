@@ -1,6 +1,0 @@
-<!DOCTYPE books [
-  <!ELEMENT books (book+)>
-
-  <!ELEMENT book (isbn, title, author, stock, price)>
-  <!ATTLIST book id ID #REQUIRED>
-]> 

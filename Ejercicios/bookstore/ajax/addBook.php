@@ -1,4 +1,5 @@
 <?php
+  require_once('../xml/xmlLoader.php');
   decodeArray($_GET['q']);
 
   function decodeArray ($str) { addBook(explode('=', $str)); }
@@ -21,6 +22,7 @@
       $statement->bindValue(':price', $book[4]);
 
       $statement->execute();
+      addToXML($book[0], $book, 'book');
 
       echo "El libro '" . $book[1] . "' se ha añadido con éxito<br>";
     } catch (PDOException $e) {
