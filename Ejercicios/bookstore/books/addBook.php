@@ -1,4 +1,8 @@
 <?php
+  decodeArray ($_GET['q']);
+
+  function decodeArray ($str) { addBook(explode('=', $str)); }
+
   function addBook ($book) {
     require('../bbdd/connection.php');
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

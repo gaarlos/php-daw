@@ -1,5 +1,5 @@
 <?php
-  $route = "/Ejercicios/BBDD/index.php";
+  $route = "/php-daw/Ejercicios/bookstore/index.php";
   $styles = "
     /* COLORS
       primary: {
@@ -55,18 +55,18 @@
       text-align: right;
     }
     
-    input[type=radio], input[type=color], input[type=submit] {
+    input[type=radio], input[type=color], input[type=submit], .submit {
       cursor: pointer;
     }
     
-    input[type=submit] {
+    input[type=submit], .submit {
       padding: 1rem;
       border: 1px solid rgb(100, 100, 255);
       background-color: rgb(200, 200, 255);
       transition: background-color .5s ease;
     }
     
-    input[type=submit]:hover {
+    input[type=submit]:hover, .submit:hover {
       background-color: rgb(100, 100, 255);
     }
     
@@ -136,6 +136,20 @@
 
     .head-hr {
       color: #006db3;
+    }
+
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      font-family: Verdana, Arial, Helvetica, sans-serif;
+    }
+
+    th {
+      background-color: #63ccff;
+    }
+
+    td {
+      background-color: #80e27e;
     }
 
     .ex, .title {

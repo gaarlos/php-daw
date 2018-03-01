@@ -1,42 +1,57 @@
 <html>
   <?php
-    require_once($_SERVER['DOCUMENT_ROOT'] . '/Ejercicios/BBDD/styles/header.php');
+    require_once($_SERVER['DOCUMENT_ROOT'] . '/php-daw/Ejercicios/bookstore/styles/header.php');
     $header = new Header('Base de datos', 'Add books to database');
     echo $header;
   ?>
 <main class="container">
-  <form action="add_book.php" method="post" class="second-form">
+  <form class="second-form" id="form" method="POST">
     <div>
       <label for="ISBN">ISBN</label>
-      <input type="text" name="isbn" maxlength="13" required>
+      <input id="isbn" type="text" name="isbn" maxlength="13" required>
     </div>
     <div>
       <label for="title">Title</label>
-      <input type="text" name="title" maxlength="255" required>
+      <input id="title" type="text" name="title" maxlength="255" required>
     </div>
     <div>
       <label for="author">Author</label>
-      <input type="text" name="author" maxlength="255" required>
+      <input id="author" type="text" name="author" maxlength="255" required>
     </div>
     <div>
       <label for="stock">Stock</label>
-      <input type="text" name="stock" maxlength="5" pattern="[0-9]{1-5}" required>
+      <input id="stock" type="text" name="stock" maxlength="5" pattern="[0-9]{1-5}" required>
     </div>
     <div>
       <label for="price">Price</label>
-      <input type="text" name="price" maxlength="4" pattern="[0-9.,]{1-5}" required>
+      <input id="price" type="text" name="price" maxlength="4" pattern="[0-9]{1-5}" required>
     </div>  
 
-    <input type="submit" name="add_book" value="ADD BOOK">
+    <button class="submit" onclick="addBook(event)">ADD BOOK</button>
   </form>
+  <div id="table"></div>
+  <script src="listDatabase.js"></script>
+  <script>
+    const addBook = (e) => {
+      xmlhttp = new XMLHttpRequest()
 
-  <?php
-    if(isset($_POST['add_book'])) {
-      $book = [$_POST['isbn'], $_POST['title'], $_POST['author'], $_POST['stock'], $_POST['price']];
+      e.preventDefault()
+      var values = []
+      values.push(document.getElementById('isbn').value)
+      values.push(document.getElementById('title').value)
+      values.push(document.getElementById('author').value)
+      values.push(document.getElementById('stock').value)
+      values.push(document.getElementById('price').value)
 
-      require('addBook.php');
-      addBook($book);
+      values = values.join('=')
+
+      xmlhttp.open("GET", "addBook.php?q=" + values, true)
+      xmlhttp.send()
+      document.getElementById("form").reset(); 
+      listBooks('book')
     }
-  ?>
+
+    (function () { listBooks('book') })()
+  </script>
 </main>
 </html>
