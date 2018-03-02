@@ -57,9 +57,10 @@ function getValues () {
   var inputs = document.getElementsByTagName('input')
   
   for (let i = 0; i < inputs.length; i++) {
+    if (inputs[i].type === 'radio' && !inputs[i].checked) { continue }
     values.push(inputs[i].value)
   }
-  
+
   document.getElementById('form').reset()
   return values
 }

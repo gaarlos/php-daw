@@ -52,6 +52,8 @@
       $statement->bindValue(':compare',$compare);
       $statement->execute();
 
+      deleteFromXML($compare, $table);
+
       echo "Fila eliminada con éxito<br>
       <a href='../index.php' class='back'>Volver</a>";
     } catch (PDOException $e) {

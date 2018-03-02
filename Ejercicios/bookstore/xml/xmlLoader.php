@@ -47,14 +47,10 @@
     $xmlFile = @simplexml_load_file($route);
 
     if (!$xmlFile) { return; }
-    $table == 'book' ? array_unshift($newData, $compare) : null;
-    $query = getQuery($table);
     $xml = getXQuery($xmlFile, $table, $compare);
 
-    for ($i = 0; $i < sizeof($query); $i++) {
-      $str = $query[$i];
-      $xml[0]->$str = $newData[$i];
-    }
+    if (sizeof($xml) == 0) { return; }
+    unset($xml[0][0]);
 
     $xmlFile->asXML($route);
   }
